@@ -175,6 +175,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // Our packages
+        Unisharp\Ckeditor\ServiceProvider::class,
+
+        // Our packages  
+        App\Providers\BlogServiceProvider::class,
     ],
 
     /*

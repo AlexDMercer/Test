@@ -35,13 +35,22 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
+                    <a class="btn" href="{{route('admin.index')}}">Панель состояния</a>
                     <div class="dropdown">
-                      <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <a class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Блог
-                      </button>
+                      </a>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                         <a class="dropdown-item" href="{{route('admin.category.index')}}">Категории</a>
-                        <a class="dropdown-item" href="#">Материалы</a>
+                        <a class="dropdown-item" href="{{route('admin.article.index')}}">Материалы</a>
+                      </div>
+                    </div>
+                    <div class="dropdown">
+                      <a class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Управление пользователями
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <a class="dropdown-item" href="{{route('admin.user_managment.user.index')}}">Пользователи</a>
                       </div>
                     </div>
 
@@ -85,5 +94,8 @@
             @yield('content')
         </main>
     </div>
+
+    <script src="{{asset('/vendor/unisharp/laravel-ckeditor/ckeditor.js')}}"></script>
+    <!-- <script src="{{asset('js/app.js')}}"></script> -->
 </body>
 </html>
